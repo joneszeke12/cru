@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="T" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Command</Value>
+    </Setting>
+    <Setting Name="TF" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Used</Value>
+    </Setting>
+    <Setting Name="P" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Used</Value>
+    </Setting>
+    <Setting Name="F" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Used</Value>
+    </Setting>
+    <Setting Name="RL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Include</Value>
+    </Setting>
+    <Setting Name="SR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Include</Value>
+    </Setting>
+    <Setting Name="ED" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Default</Value>
+    </Setting>
+    <Setting Name="DD" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Default</Value>
+    </Setting>
+    <Setting Name="CM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Off</Value>
+    </Setting>
+    <Setting Name="PE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.txt</Value>
+    </Setting>
+    <Setting Name="OOS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RecentServer1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RecentServer2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RecentServer3" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
