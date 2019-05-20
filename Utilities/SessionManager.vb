@@ -16,15 +16,15 @@ Module SessionManager
         End Function
         Function ListviewQuerySyntax(objectID As String)
             Return "select *
-                                                 from ci_infoobjects
-                                                 where si_parentid = " + objectID + " " +
-                                                "and (si_kind = 'Folder' or si_kind = 'CrystalReport')"
+                    from ci_infoobjects
+                    where si_parentid = " + objectID + " " +
+                   "and (si_kind = 'Folder' or si_kind = 'CrystalReport')"
         End Function
         Function ReportsOnlyQuerySyntax(objectID As String)
             Return "select *
-                                                 from ci_infoobjects
-                                                 where si_parentid = " + objectID + " " +
-                                                "and si_kind = 'CrystalReport'"
+                    from ci_infoobjects
+                    where si_parentid = " + objectID + " " +
+                   "and si_kind = 'CrystalReport'"
         End Function
         Sub Login(info As String())
             EnterpriseSession = _sessionMgr.Logon(Trim(info(0)), Trim(info(1)), Trim(info(2)), Trim(info(3)))
