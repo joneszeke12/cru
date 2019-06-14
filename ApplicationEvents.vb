@@ -24,7 +24,7 @@ Namespace My
             Dim outputFileRef As String = String.Empty
             If isRPT Then
                 fileName = Path.GetFullPath(commandArg)
-                AppWorker.Queue(New WaitCallback(Sub() AppWorker.Extract(fileName, outputFileRef)))
+                AppWorker.Extract(fileName, outputFileRef)
                 If My.Settings.OOS Then
                     Try
                         Process.Start(outputFileRef)
