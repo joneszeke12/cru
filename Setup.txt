@@ -1,0 +1,2 @@
+﻿-Download and install Crystal Reports Runtime 32 bit (Free)
+-Compile project using Visual Studio

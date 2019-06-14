@@ -332,6 +332,7 @@
     <Content Include="Images\cru.ico" />
     <Content Include="Images\folderclose.gif" />
     <Content Include="Images\report.gif" />
+    <Content Include="Setup.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
