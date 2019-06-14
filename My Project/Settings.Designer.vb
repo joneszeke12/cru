@@ -140,18 +140,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Default")>  _
-        Public Property DD() As String
-            Get
-                Return CType(Me("DD"),String)
-            End Get
-            Set
-                Me("DD") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Off")>  _
         Public Property CM() As String
             Get
@@ -183,42 +171,6 @@ Namespace My
             End Get
             Set
                 Me("OOS") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property RecentServer1() As String
-            Get
-                Return CType(Me("RecentServer1"),String)
-            End Get
-            Set
-                Me("RecentServer1") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property RecentServer2() As String
-            Get
-                Return CType(Me("RecentServer2"),String)
-            End Get
-            Set
-                Me("RecentServer2") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property RecentServer3() As String
-            Get
-                Return CType(Me("RecentServer3"),String)
-            End Get
-            Set
-                Me("RecentServer3") = value
             End Set
         End Property
     End Class

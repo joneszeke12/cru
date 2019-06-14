@@ -76,50 +76,38 @@
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=14.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dependencies\EnterpriseDLLs\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\13.0.3500.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>Dependencies\EnterpriseDLLs\CrystalDecisions.Enterprise.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportAppServer.ClientDoc\13.0.3500.0__692fbea5521e1304\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>Dependencies\EnterpriseDLLs\CrystalDecisions.Enterprise.InfoStore.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportAppServer.Controllers\13.0.3500.0__692fbea5521e1304\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=14.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>Dependencies\EnterpriseDLLs\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportAppServer.DataDefModel\13.0.3500.0__692fbea5521e1304\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=14.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>Dependencies\EnterpriseDLLs\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportAppServer.ReportDefModel\13.0.3500.0__692fbea5521e1304\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=14.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>Dependencies\EnterpriseDLLs\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=14.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>Dependencies\EnterpriseDLLs\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="CrystalDecisions.Shared, Version=14.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dependencies\EnterpriseDLLs\CrystalDecisions.Shared.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.Shared\13.0.3500.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -146,40 +134,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Forms\CustomControls\RepositoryList.Designer.vb">
-      <DependentUpon>RepositoryList.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CustomControls\RepositoryList.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Forms\CustomControls\RepositoryTree.Designer.vb">
-      <DependentUpon>RepositoryTree.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CustomControls\RepositoryTree.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Forms\Log.Designer.vb">
       <DependentUpon>Log.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Log.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Login.Designer.vb">
-      <DependentUpon>Login.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Main.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Repository.Designer.vb">
-      <DependentUpon>Repository.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Repository.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Settings.Designer.vb">
@@ -205,23 +169,13 @@
     </Compile>
     <Compile Include="Startup\Header.vb" />
     <Compile Include="Utilities\ReportFunctions.vb" />
-    <Compile Include="Utilities\SessionManager.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\CustomControls\RepositoryTree.resx">
-      <DependentUpon>RepositoryTree.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Log.resx">
       <DependentUpon>Log.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login.resx">
-      <DependentUpon>Login.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Repository.resx">
-      <DependentUpon>Repository.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
@@ -236,14 +190,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="app.manifest" />
-    <None Include="CRRuntime_32bit_13_0_23.msi">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Dependencies\BusinessObjects.Enterprise.Sdk.ebus.netmodule" />
-    <None Include="Dependencies\BusinessObjects.Enterprise.Sdk.fssl.netmodule" />
-    <None Include="Dependencies\BusinessObjects.Enterprise.Sdk.netmodule" />
-    <None Include="Dependencies\BusinessObjects.Enterprise.Sdk.Ssl.netmodule" />
-    <None Include="Dependencies\BusinessObjects.Enterprise.Sdk.ZipLib.netmodule" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -262,81 +208,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dependencies\BusinessObjects.Enterprise.Sdk.dll" />
-    <Content Include="Dependencies\CRVsPackageLib.dll" />
-    <Content Include="Dependencies\CrystalDecisions.CrystalReports.Design.dll" />
-    <Content Include="Dependencies\CrystalDecisions.CrystalReports.Engine.dll" />
-    <Content Include="Dependencies\CrystalDecisions.CrystalReports.TemplateEngine.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Admin.Audit.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Admin.CachePageServer.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Admin.Cms.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Admin.EventServer.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Admin.FileServer.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Admin.JobServer.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Admin.ReportAppServer.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Admin.SingleSignOn.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.AuditProxyService.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Auth.secEnterprise.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Auth.secLDAP.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Auth.secWinAD.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Auth.secWindowsNT.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Calendar.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Connection.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.CustomRole.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Event.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Excel.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.FavoritesFolder.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Folder.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Hyperlink.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.LicenseKey.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.ObjectPackage.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Pdf.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Powerpoint.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Program.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Rtf.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Server.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.ServerGroup.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Shortcut.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Txt.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.User.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.UserGroup.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Desktop.Word.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Dest.DiskUnmanaged.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Dest.Ftp.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Dest.Smtp.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Framework.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.InfoStore.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.PluginManager.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Utils.UtcConverter.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Enterprise.Viewing.ReportSource.dll" />
-    <Content Include="Dependencies\CrystalDecisions.PromptingClientSDK.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.CommLayer.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.CommonControls.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.CommonObjectModel.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.Controllers.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.CubeDefModel.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.DataDefModel.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.DataSetConversion.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.ObjectFactory.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.Prompting.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.ReportDefModel.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportAppServer.XmlSerialize.dll" />
-    <Content Include="Dependencies\CrystalDecisions.ReportSource.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Sdk.Uri.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Shared.dll" />
-    <Content Include="Dependencies\CrystalDecisions.VSDesigner.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Web.dll" />
-    <Content Include="Dependencies\CrystalDecisions.Windows.Forms.dll" />
-    <Content Include="Images\blank.gif" />
     <Content Include="Images\cru.ico" />
-    <Content Include="Images\folderclose.gif" />
-    <Content Include="Images\report.gif" />
     <Content Include="Setup.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if not exist  "$(TargetDir)Dependencies" mkdir "$(TargetDir)Dependencies"
-xcopy /d /e "$(ProjectDir)Dependencies" "$(TargetDir)Dependencies"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

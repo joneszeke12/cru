@@ -31,7 +31,6 @@ Partial Class MainForm
         Me.MFContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ShowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExploreButton = New System.Windows.Forms.Button()
         Me.MFContextMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,7 +40,7 @@ Partial Class MainForm
         Me.FileButton.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FileButton.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.FileButton.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.FileButton.Location = New System.Drawing.Point(12, 12)
+        Me.FileButton.Location = New System.Drawing.Point(12, 22)
         Me.FileButton.Name = "FileButton"
         Me.FileButton.Size = New System.Drawing.Size(102, 52)
         Me.FileButton.TabIndex = 1
@@ -54,7 +53,7 @@ Partial Class MainForm
         Me.FolderButton.BackColor = System.Drawing.Color.Transparent
         Me.FolderButton.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FolderButton.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.FolderButton.Location = New System.Drawing.Point(120, 12)
+        Me.FolderButton.Location = New System.Drawing.Point(120, 22)
         Me.FolderButton.Name = "FolderButton"
         Me.FolderButton.Size = New System.Drawing.Size(102, 52)
         Me.FolderButton.TabIndex = 2
@@ -67,7 +66,7 @@ Partial Class MainForm
         Me.SettingsButton.BackColor = System.Drawing.Color.Transparent
         Me.SettingsButton.Cursor = System.Windows.Forms.Cursors.Hand
         Me.SettingsButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SettingsButton.Location = New System.Drawing.Point(47, 99)
+        Me.SettingsButton.Location = New System.Drawing.Point(46, 95)
         Me.SettingsButton.Name = "SettingsButton"
         Me.SettingsButton.Size = New System.Drawing.Size(141, 23)
         Me.SettingsButton.TabIndex = 4
@@ -99,25 +98,12 @@ Partial Class MainForm
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
-        'ExploreButton
-        '
-        Me.ExploreButton.BackColor = System.Drawing.Color.Transparent
-        Me.ExploreButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ExploreButton.Location = New System.Drawing.Point(67, 70)
-        Me.ExploreButton.Name = "ExploreButton"
-        Me.ExploreButton.Size = New System.Drawing.Size(103, 23)
-        Me.ExploreButton.TabIndex = 3
-        Me.ExploreButton.TabStop = False
-        Me.ExploreButton.Text = "Explore Repository"
-        Me.ExploreButton.UseVisualStyleBackColor = False
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightYellow
         Me.ClientSize = New System.Drawing.Size(232, 130)
-        Me.Controls.Add(Me.ExploreButton)
         Me.Controls.Add(Me.FileButton)
         Me.Controls.Add(Me.SettingsButton)
         Me.Controls.Add(Me.FolderButton)
@@ -135,7 +121,6 @@ Partial Class MainForm
     Friend WithEvents FolderButton As Windows.Forms.Button
     Friend WithEvents SettingsButton As Windows.Forms.Button
     Friend WithEvents MFNotifyIcon As Windows.Forms.NotifyIcon
-    Friend WithEvents ExploreButton As Windows.Forms.Button
     Friend WithEvents MFContextMenuStrip As Windows.Forms.ContextMenuStrip
     Friend WithEvents ExitToolStripMenuItem As Windows.Forms.ToolStripMenuItem
     Friend WithEvents ShowToolStripMenuItem As Windows.Forms.ToolStripMenuItem

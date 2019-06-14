@@ -1,10 +1,8 @@
 ﻿Imports Microsoft.Win32
 Imports System.ComponentModel
-Imports System.Windows.Forms
 Module Header
     Public Property AppWorker As New Worker
     Public Property AppTextBox As TextBox = LogForm.LogTextBox
-    Public Property AppSession As New Session
     Public Property DesktopDirectory As String = My.Computer.FileSystem.SpecialDirectories.Desktop
     Delegate Sub PostToLogDelegate(text As String)
     Public Sub PostToLog(text As String)
@@ -136,32 +134,6 @@ Module Header
                     End If
                 Else
                     My.Settings.ED = value
-                End If
-            End Set
-        End Property
-        <
-            Category("Directories"),
-            DisplayName("Downloads"),
-            Description("Choose where downloads will go. Set to 'Default' for desktop."),
-            TypeConverter(GetType(Converters.DownloadDirectoryStringConverter))
-        >
-        Public Property DownloadDirectory
-            Get
-                Return My.Settings.DD
-            End Get
-            Set(value)
-                Dim dialogResult As DialogResult
-                Dim folderBrowserDialog As FolderBrowserDialog
-                If value = "New Directory..." Then
-                    folderBrowserDialog = New FolderBrowserDialog
-                    dialogResult = folderBrowserDialog.ShowDialog()
-                    If dialogResult = DialogResult.Cancel Then
-                        Exit Property
-                    Else
-                        My.Settings.DD = folderBrowserDialog.SelectedPath
-                    End If
-                Else
-                    My.Settings.DD = value
                 End If
             End Set
         End Property
@@ -304,18 +276,6 @@ Module Header
                 End Function
             End Class
             Class ExtractDirectoryStringConverter
-                Inherits StringConverter
-                Public Overrides Function GetStandardValuesSupported(ByVal context As ITypeDescriptorContext) As Boolean
-                    Return True
-                End Function
-                Public Overrides Function GetStandardValuesExclusive(ByVal context As ITypeDescriptorContext) As Boolean
-                    Return True
-                End Function
-                Public Overrides Function GetStandardValues(ByVal context As ITypeDescriptorContext) As StandardValuesCollection
-                    Return New StandardValuesCollection(New String() {"Default", "New Directory..."})
-                End Function
-            End Class
-            Class DownloadDirectoryStringConverter
                 Inherits StringConverter
                 Public Overrides Function GetStandardValuesSupported(ByVal context As ITypeDescriptorContext) As Boolean
                     Return True

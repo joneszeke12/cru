@@ -79,12 +79,6 @@ Public Class MainForm
             Next
         End If
     End Sub
-    Private Sub ExploreButton_Click(sender As Object, e As EventArgs) Handles ExploreButton.Click
-        If Not (Application.OpenForms.OfType(Of RepositoryForm).Any Or
-             Application.OpenForms.OfType(Of LoginForm).Any) Then
-            LoginForm.Show(Me)
-        End If
-    End Sub
     Private Sub SettingsButton_Click(sender As Object, e As EventArgs) Handles SettingsButton.Click
         If Not Application.OpenForms.OfType(Of SettingsForm).Any Then
             SettingsForm.Show(Me)

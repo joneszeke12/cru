@@ -5,7 +5,6 @@ Imports System.Threading
 Imports ctrl = CrystalDecisions.ReportAppServer.Controllers
 Imports ddm = CrystalDecisions.ReportAppServer.DataDefModel
 Imports eng = CrystalDecisions.CrystalReports.Engine
-Imports ent = CrystalDecisions.Enterprise
 Imports rdm = CrystalDecisions.ReportAppServer.ReportDefModel
 Module ReportFunctions
     Const E_APPENDAGE As String = " - EXTRACTION"
@@ -13,27 +12,6 @@ Module ReportFunctions
     Class Worker
         Sub Queue(callBack As WaitCallback)
             ThreadPool.QueueUserWorkItem(callBack)
-        End Sub
-        Sub Download(infoObject As ent.InfoObject, enterpriseSession As ent.EnterpriseSession, Optional ByRef outputFileRef As String = Nothing)
-            Dim fileName As String = If(LCase(Right(infoObject.Title, 4)) <> ".rpt", infoObject.Title + ".rpt", infoObject.Title)
-            Dim outputFile As String = If(My.Settings.DD = "Default", DesktopDirectory, My.Settings.DD) + "\" + fileName
-            If outputFileRef IsNot Nothing Then outputFileRef = outputFile
-            Try
-                Using reportDocument As New eng.ReportDocument
-                    With reportDocument
-                        .Load(infoObject, enterpriseSession)
-                        .SaveAs(outputFile)
-                        .Close()
-                    End With
-                End Using
-                ExclusiveUsage.WaitOne()
-                PostToLog(Date.Now.ToString("f") + " - [" + fileName + "] downloaded. Output located at: " + My.Settings.DD)
-                ExclusiveUsage.ReleaseMutex()
-            Catch ex As Exception
-                ExclusiveUsage.WaitOne()
-                PostToLog(Date.Now.ToString("f") + " - Error downloading [" + fileName + "]: " + ex.Message)
-                ExclusiveUsage.ReleaseMutex()
-            End Try
         End Sub
         Sub Extract(fileName As String, Optional ByRef outputFileRef As String = Nothing)
             Dim writer As New Writer
@@ -44,31 +22,6 @@ Module ReportFunctions
                 textWriter = TextWriter.Synchronized(New StreamWriter(File.Open(outputFile, FileMode.Create)))
                 Using reportDocument As New eng.ReportDocument
                     reportDocument.Load(fileName)
-                    writer.Write(textWriter, reportDocument)
-                End Using
-                ExclusiveUsage.WaitOne()
-                PostToLog(Date.Now.ToString("f") + " - [" + fileName + "] extracted. Output located at: " + My.Settings.ED)
-                ExclusiveUsage.ReleaseMutex()
-            Catch ex As Exception
-                ExclusiveUsage.WaitOne()
-                PostToLog(Date.Now.ToString("f") + " - Error extracting [" + fileName + "]: " + ex.Message)
-                ExclusiveUsage.ReleaseMutex()
-            Finally
-                If textWriter IsNot Nothing Then
-                    textWriter.Dispose()
-                End If
-            End Try
-        End Sub
-        Sub Extract(infoObject As ent.InfoObject, enterpriseSession As ent.EnterpriseSession, Optional ByRef outputFileRef As String = Nothing)
-            Dim writer As New Writer
-            Dim fileName As String = infoObject.Title
-            Dim textWriter As TextWriter
-            Dim outputFile As String = If(My.Settings.ED = "Default", DesktopDirectory, My.Settings.ED) + "\" + fileName + E_APPENDAGE + My.Settings.PE
-            If outputFileRef IsNot Nothing Then outputFileRef = outputFile
-            Try
-                textWriter = TextWriter.Synchronized(New StreamWriter(File.Open(outputFile, FileMode.Create)))
-                Using reportDocument As New eng.ReportDocument
-                    reportDocument.Load(infoObject, enterpriseSession)
                     writer.Write(textWriter, reportDocument)
                 End Using
                 ExclusiveUsage.WaitOne()
