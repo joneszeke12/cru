@@ -21,9 +21,17 @@ Namespace My
             Dim folderFiles As String()
             Dim isRPT As Boolean = LCase(Path.GetExtension(commandArg)).Equals(".rpt")
             Dim directoryExists As Boolean = Directory.Exists(commandArg)
+            Dim outputFileRef As String = String.Empty
             If isRPT Then
                 fileName = Path.GetFullPath(commandArg)
-                AppWorker.Queue(New WaitCallback(Sub() AppWorker.Extract(fileName)))
+                AppWorker.Queue(New WaitCallback(Sub() AppWorker.Extract(fileName, outputFileRef)))
+                If My.Settings.OOS Then
+                    Try
+                        Process.Start(outputFileRef)
+                    Catch ex As Exception
+                        PostToLog(Date.Now.ToString("f") + " - Error opening [" + outputFileRef + "]: " + ex.Message)
+                    End Try
+                End If
             ElseIf directoryExists Then
                 folderName = Path.GetFullPath(commandArg)
                 folderFiles = Directory.GetFiles(folderName, "*.rpt", SearchOption.TopDirectoryOnly)
