@@ -169,7 +169,7 @@ Module Header
                 Dim subkeyFile As String = "SystemFileAssociations\.rpt\shell\Extract RPT"
                 Dim subkeyFolder As String = "Directory\shell\Extract RPT(s) From Folder"
                 Dim registryRoot As RegistryKey = Registry.ClassesRoot
-                If Not My.User.IsInRole(ApplicationServices.BuiltInRole.Administrator) Then
+                If Not Security.Principal.WindowsIdentity.GetCurrent.Owner.IsWellKnown(Security.Principal.WellKnownSidType.BuiltinAdministratorsSid) Then
                     MessageBox.Show(New Form With {.TopMost = True},
                                     "Please re-open program as administrator to change this setting.",
                                     "Error",
