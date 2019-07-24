@@ -1,5 +1,6 @@
 ﻿Imports Microsoft.Win32
 Imports System.ComponentModel
+Imports System.Security.Principal
 Module Header
     Public Property AppWorker As New Worker
     Public Property AppTextBox As TextBox = LogForm.LogTextBox
@@ -169,13 +170,7 @@ Module Header
                 Dim subkeyFile As String = "SystemFileAssociations\.rpt\shell\Extract RPT"
                 Dim subkeyFolder As String = "Directory\shell\Extract RPT(s) From Folder"
                 Dim registryRoot As RegistryKey = Registry.ClassesRoot
-                If Not Security.Principal.WindowsIdentity.GetCurrent.Owner.IsWellKnown(Security.Principal.WellKnownSidType.BuiltinAdministratorsSid) Then
-                    MessageBox.Show(New Form With {.TopMost = True},
-                                    "Please re-open program as administrator to change this setting.",
-                                    "Error",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error)
-                Else
+                If WindowsIdentity.GetCurrent.Owner.IsWellKnown(WellKnownSidType.BuiltinAdministratorsSid) Then
                     Try
                         Select Case value
                             Case "On"
@@ -195,6 +190,12 @@ Module Header
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error)
                     End Try
+                Else
+                    MessageBox.Show(New Form With {.TopMost = True},
+                                    "Please re-open program as administrator to change this setting.",
+                                    "Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error)
                 End If
             End Set
         End Property
