@@ -169,25 +169,33 @@ Module Header
                 Dim subkeyFile As String = "SystemFileAssociations\.rpt\shell\Extract RPT"
                 Dim subkeyFolder As String = "Directory\shell\Extract RPT(s) From Folder"
                 Dim registryRoot As RegistryKey = Registry.ClassesRoot
-                Try
-                    Select Case value
-                        Case "On"
-                            registryRoot.CreateSubKey(subkeyFile).CreateSubKey("command").SetValue(String.Empty, appPath + " %1")
-                            registryRoot.CreateSubKey(subkeyFolder).CreateSubKey("command").SetValue(String.Empty, appPath + " %1")
-                        Case "Off"
-                            With registryRoot
-                                .DeleteSubKeyTree(subkeyFile, False)
-                                .DeleteSubKeyTree(subkeyFolder, False)
-                            End With
-                    End Select
-                    My.Settings.CM = value
-                Catch ex As Exception
+                If Not My.User.IsInRole(ApplicationServices.BuiltInRole.Administrator) Then
                     MessageBox.Show(New Form With {.TopMost = True},
-                                    ex.Message,
+                                    "Please re-open program as administrator to change this setting.",
                                     "Error",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error)
-                End Try
+                Else
+                    Try
+                        Select Case value
+                            Case "On"
+                                registryRoot.CreateSubKey(subkeyFile).CreateSubKey("command").SetValue(String.Empty, appPath + " %1")
+                                registryRoot.CreateSubKey(subkeyFolder).CreateSubKey("command").SetValue(String.Empty, appPath + " %1")
+                            Case "Off"
+                                With registryRoot
+                                    .DeleteSubKeyTree(subkeyFile, False)
+                                    .DeleteSubKeyTree(subkeyFolder, False)
+                                End With
+                        End Select
+                        My.Settings.CM = value
+                    Catch ex As Exception
+                        MessageBox.Show(New Form With {.TopMost = True},
+                                        ex.Message,
+                                        "Error",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error)
+                    End Try
+                End If
             End Set
         End Property
         Class Converters
