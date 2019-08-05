@@ -6,6 +6,7 @@ Namespace My
             Extract(String.Join(" ", e.CommandLine))
         End Sub
         Private Sub MyApplication_StartupNextInstance(ByVal sender As Object, ByVal e As ApplicationServices.StartupNextInstanceEventArgs) Handles Me.StartupNextInstance
+            e.BringToForeground = False
             Extract(String.Join(" ", e.CommandLine))
         End Sub
         Private Sub MyApplication_UnhandledException(ByVal sender As Object, ByVal e As ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
