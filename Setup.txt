@@ -1,2 +1,3 @@
-﻿-Download and install Crystal Reports Runtime 32 bit (Free)
--Compile project using Visual Studio
+﻿*Requires .NET Framework 4.0*
+1. Install Crystal Reports Runtime 32 bit 13.0.23 (Free. File provided)
+2. Run

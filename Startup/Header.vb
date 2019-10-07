@@ -141,7 +141,7 @@ Module Header
         <
             Category("Other"),
             DisplayName("Open On Success"),
-            Description("Opens output file in default program after a successful operation. Only works for single files."),
+            Description("Opens output file in default program after a successful operation. Only works for single files opened directly through application."),
             TypeConverter(GetType(Converters.OpenOnSuccessBooleanConverter))
         >
         Public Property OpenOnSuccess
